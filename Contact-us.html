@@ -1,0 +1,106 @@
+<!-- Contact-us.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-us</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+        .site-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 9999;
+            /* Ensure it's above other content */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Geeks Job</h1>
+        </div>
+        <div class="nav-links">
+            <ul id=>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/jobs.html">Jobs</a></li>
+                <li><a href="/companies.html">Companies</a></li>
+                <li><a href="/Contact-us.html">Contact Us</a></li>
+                <li><a href="#">Submit a Job</a></li>
+                <li><a href="#">Upload Resume</a></li>
+            </ul>
+        </div>
+        <div class="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+    </nav>
+
+    <div class="container-form">
+        <h2 class="form-title">Contact Us</h2>
+        <form id="contactForm">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+
+            <label for="message" class="form-label">Message:</label>
+            <textarea id="message" name="message" rows="4" class="form-textarea" required></textarea>
+
+            <button type="submit" class="form-button">Submit</button>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Job Search</a></li>
+                    <li><a href="#">Resume Writing</a></li>
+                    <li><a href="#">Interview Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Geeks Job. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/script/main.js"></script>
+
+
+</body>
+
+</html>

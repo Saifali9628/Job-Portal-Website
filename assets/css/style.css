@@ -1,0 +1,747 @@
+/* style.css */
+
+
+/*****COMMON CSS SECTION*****/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0px auto;
+}
+
+.width-100 {
+    width: 100%;
+    float: left;
+}
+
+.width-66 {
+    width: 66%;
+    float: left;
+}
+
+.width-50 {
+    float: left;
+    width: 50%;
+}
+
+.width-75 {
+    width: 75%;
+    float: left;
+}
+
+.width-33 {
+    width: 33%;
+    float: left;
+}
+
+.width-25 {
+    width: 25%;
+    float: left;
+}
+
+
+/* navbar */
+
+.navbar {
+    background-color: #023047;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100vw;
+}
+
+.logo h1 {
+    margin-left: 100px;
+    font-size: 50px;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: green;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Initially hide the hamburger menu */
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+
+/* Media Query for Mobile View */
+
+@media screen and (max-width: 330px) {
+    .navbar {
+        background-color: #023047;
+        color: #fff;
+        padding: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 100vw;
+    }
+    .logo h1 {
+        margin-left: 0;
+        margin-right: 60px;
+        font-size: 30px;
+    }
+    .nav-links ul {
+        display: none;
+        /* Hide the nav links */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+        position: absolute;
+        /* Position absolutely */
+        top: 40px;
+        /* Adjust the top position to be below the navbar */
+        left: 60px;
+        /* Align with the left edge of the navbar */
+        background-color: #023047aa;
+        /* Background color */
+        padding: 25px 0;
+        /* Add some padding */
+        border-radius: 5px;
+        /* Add border radius */
+    }
+    .nav-links ul.active {
+        display: flex;
+        /* Show the nav links when active */
+    }
+    .nav-links a:focus {
+        color: green;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .hamburger-menu {
+        display: block;
+        /* Show the hamburger menu */
+        position: absolute;
+        /* Position absolutely */
+        top: 10px;
+        /* Adjust the top position */
+        right: 10px;
+        /* Adjust the right position */
+        z-index: 999;
+        /* Ensure it's above other content */
+    }
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .filters {
+        /* Display filters in a column layout */
+        align-items: center;
+        /* Stretch filters to fill the width */
+        /* Adjust padding for smaller screens */
+        width: 50px;
+    }
+    .filters label {
+        margin-bottom: 5px;
+        /* Reduce margin bottom for smaller screens */
+        width: 30%;
+        /* Ensure labels take full width */
+        text-align: left;
+        /* Align text to the left */
+    }
+    .filters select,
+    .filters input[type="text"] {
+        width: 10px;
+    }
+}
+
+@media (min-width: 331px) and (max-width: 640px) {
+    .logo h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+    .nav-links ul {
+        display: none;
+        /* Hide the nav links */
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin-top: 10px;
+        position: absolute;
+        /* Position absolutely */
+        top: 20px;
+        /* Adjust the top position to be below the navbar */
+        left: 200px;
+        /* Align with the left edge of the navbar */
+        background-color: #023047aa;
+        /* Background color */
+        padding: 10px 0;
+        /* Add some padding */
+        border-radius: 5px;
+        /* Add border radius */
+    }
+    .nav-links ul.active {
+        display: flex;
+        /* Show the nav links when active */
+    }
+    .nav-links a:focus {
+        color: green;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .hamburger-menu {
+        display: block;
+        /* Show the hamburger menu */
+        position: absolute;
+        /* Position absolutely */
+        top: 10px;
+        /* Adjust the top position */
+        right: 10px;
+        /* Adjust the right position */
+        z-index: 999;
+        /* Ensure it's above other content */
+    }
+    .change .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .change .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .change .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+/* Additional CSS for Enhanced Filters */
+
+.filters {
+    background-color: #cfcaca;
+    border-radius: 8px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+    font-family: "Rubik", sans-serif;
+    color: #023047;
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    border-left: 5px solid #023047;
+}
+
+.filters label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.filters select,
+.filters input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.filters select {
+    min-width: 150px;
+}
+
+.filter-input {
+    flex: 1;
+    margin-right: 15px;
+}
+
+
+/* Style for Options in Select Boxes */
+
+.filters select option {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+/* Reduce space between elements */
+
+.filters * {
+    margin: 5px;
+}
+
+@media screen and (max-width: 330px) {
+    .filters {
+        /* Display filters in a column layout */
+        align-items: center;
+        /* Stretch filters to fill the width */
+        /* Adjust padding for smaller screens */
+        width: 50px;
+    }
+    .filters label {
+        margin-bottom: 5px;
+        /* Reduce margin bottom for smaller screens */
+        width: 30%;
+        /* Ensure labels take full width */
+        text-align: left;
+        /* Align text to the left */
+    }
+    .filters select,
+    .filters input[type="text"] {
+        width: 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .filters {
+        flex-direction: column;
+        /* Display filters in a column layout */
+        align-items: stretch;
+        /* Stretch filters to fill the width */
+        padding: 20px 10px;
+        /* Adjust padding for smaller screens */
+        width: 320px;
+    }
+    .filters label {
+        margin-bottom: 5px;
+        /* Reduce margin bottom for smaller screens */
+        width: 100%;
+        /* Ensure labels take full width */
+        text-align: left;
+        /* Align text to the left */
+    }
+    .filters select,
+    .filters input[type="text"] {
+        width: calc(100% - 20px);
+        /* Make filter inputs fill the width minus padding */
+        margin-bottom: 10px;
+        /* Add some bottom margin to separate inputs */
+    }
+}
+
+@media (max-width: 240px) {
+    .filters {
+        flex-direction: column;
+        /* Display filters in a column layout */
+        align-items: stretch;
+        /* Stretch filters to fill the width */
+        padding: 20px 10px;
+        /* Adjust padding for smaller screens */
+        width: 150px;
+        margin-left: 5px;
+    }
+    .filters label {
+        margin-bottom: 5px;
+        /* Reduce margin bottom for smaller screens */
+        width: 40%;
+        /* Ensure labels take full width */
+        text-align: left;
+        /* Align text to the left */
+    }
+    .filters select,
+    .filters input[type="text"] {
+        width: calc(100% - 50%);
+        /* Make filter inputs fill the width minus padding */
+        margin-bottom: 10px;
+        /* Add some bottom margin to separate inputs */
+    }
+}
+
+
+/***** Recent Jobs SECTION*****/
+
+.recent-job-heading {
+    text-align: center;
+    color: #000000;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+}
+
+.recent-job-sub-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.jobs-list-container {
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Rubik", sans-serif;
+}
+
+.jobs-list-container h2 {
+    font-size: 30px;
+    border-left: 4px solid #023047;
+    padding-left: 20px;
+}
+
+.jobs-list-container .jobs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.jobs-list-container .jobs img {
+    width: 60px;
+}
+
+.jobs-list-container .job {
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 400ms ease;
+}
+
+.jobs-list-container .job:hover {
+    transform: scale(1.03);
+}
+
+.jobs-list-container .open-positions {
+    position: absolute;
+    top: 40px;
+    right: 24px;
+    color: #e63946;
+}
+
+.jobs-list-container .job-title {
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    color: #023047;
+}
+
+.jobs-list-container .details {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.jobs-list-container .details-btn {
+    text-decoration: none;
+    border: 1px solid #023047;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 20px;
+    transition: all 400ms ease;
+}
+
+.jobs-list-container .details-btn:hover {
+    background: #023047;
+    color: #fff;
+}
+
+.jobs-list-container .job-search {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+    .jobs-list-container .jobs {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .jobs-list-container .jobs {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Additional Styles for Company Cards */
+
+.company-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 900px;
+    margin: 20px auto;
+    font-family: "Rubik", sans-serif;
+}
+
+.company-card {
+    width: 300px;
+    background-color: #fff;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: all 400ms ease;
+    transform: scale(1.03);
+}
+
+.company-card img {
+    width: 30px;
+}
+
+.company-card h2 {
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    color: #023047;
+}
+
+.company-card p {
+    color: #333;
+}
+
+.company-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #023047;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.company-btn:hover {
+    background-color: green;
+}
+
+.view-more-btn {
+    text-align: center;
+    margin: 20px;
+}
+
+.view-more-btn a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #023047;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn a:hover {
+    background-color: #e63946;
+}
+
+.container-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    color: #023047;
+}
+
+.form-label {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.form-button {
+    background-color: #023047;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #e63946;
+}
+
+@media (max-width: 768px) {
+    .container-form {
+        max-width: 500px;
+        /* Decrease max-width on smaller screens */
+        margin: 30px auto;
+        /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-form {
+        max-width: 90%;
+        /* Adjust max-width for even smaller screens */
+        margin: 20px auto;
+        /* Further adjust margin */
+    }
+    .form-title {
+        font-size: 20px;
+        /* Decrease font size of title on smaller screens */
+    }
+    .form-label {
+        font-size: 16px;
+        /* Decrease font size of labels on smaller screens */
+    }
+    .form-input,
+    .form-textarea,
+    .form-button {
+        padding: 8px 16px;
+        /* Adjust padding of inputs and button */
+        font-size: 14px;
+        /* Decrease font size of inputs and button */
+    }
+}
+
+
+/* Additional Styles for Footer */
+
+.site-footer {
+    background-color: #023047;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100vw;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    /* Set minimum width for each section */
+    margin-bottom: 20px;
+    /* Add some bottom margin between sections */
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    /* Add some top margin for separation */
+}
+
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 640px) {
+    .footer-content {
+        flex-direction: column;
+        /* Change to column layout on smaller screens */
+    }
+    .footer-section {
+        flex-basis: 100%;
+        /* Each section takes full width on smaller screens */
+    }
+    .site-footer {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 330px) {
+    .footer-content {
+        flex-direction: column;
+        /* Change to column layout on smaller screens */
+    }
+    .footer-section {
+        flex-basis: 100%;
+        /* Each section takes full width on smaller screens */
+    }
+    .site-footer {
+        width: 100vw;
+        padding: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h3 {
+        font-size: 18px;
+        /* Decrease heading font size on smaller screens */
+    }
+}
